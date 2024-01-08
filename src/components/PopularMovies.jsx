@@ -5,7 +5,7 @@ import Loading from "./Loading";
 import { useNavigate } from "react-router-dom";
 import Error from "./Error";
 
-const popularMovies = ({ isNative }) => {
+const PopularMovies = ({ isNative }) => {
   const { data: movies, isLoading, error } = useFetch("/api/movies");
   const navigate = useNavigate();
 
@@ -41,4 +41,4 @@ const popularMovies = ({ isNative }) => {
   );
 };
 
-export default popularMovies;
+export default PopularMovies;

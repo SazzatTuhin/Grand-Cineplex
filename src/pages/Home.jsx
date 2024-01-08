@@ -1,7 +1,7 @@
 import Hero from "../components/Hero";
 import AboutPage from "../pages/About";
 import PopularActors from "../components/PopularActors";
-import PopularMovies from "../components/popularMovies";
+import PopularMovies from "../components/PopularMovies";
 import ContactPage from "../pages/Contact";
 
 const HomePage = () => {
