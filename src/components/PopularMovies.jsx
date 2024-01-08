@@ -1,0 +1,44 @@
+import { useFetch } from "../hooks/useFetch";
+import MovieItem from "./MovieItem";
+import SectionTitle from "./SectionTitle";
+import Loading from "./Loading";
+import { useNavigate } from "react-router-dom";
+import Error from "./Error";
+
+const popularMovies = ({ isNative }) => {
+  const { data: movies, isLoading, error } = useFetch("/api/movies");
+  const navigate = useNavigate();
+
+  return (
+    <section className="wrapper section-padding">
+      <SectionTitle title={isNative ? "All Movies" : "Popular Movies"} />
+
+      {isLoading && <Loading isLoading={isLoading} />}
+
+      {error && <Error error={error} />}
+
+      {movies && (
+        <div className="grid md:grid-cols-2 lg:grid cols-3 xl:grid cols-4 gap-10">
+          {isNative &&
+            movies.map((movie) => <MovieItem key={movie._id} movie={movie} />)}
+
+          {!isNative &&
+            movies
+              .sort((a, b) => b.rating - a.rating)
+              .slice(0, 8)
+              .map((movie) => <MovieItem key={movie._id} movie={movie} />)}
+        </div>
+      )}
+
+      {!isNative && (
+        <div className="mt-20 flex justify-center">
+          <button onClick={() => navigate("/movies")} className="btn">
+            View More Movies
+          </button>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default popularMovies;
