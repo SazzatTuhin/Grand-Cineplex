@@ -1,8 +1,6 @@
-# GRAND-CINEPLEX: A Secure Movie Management Platform with Multi-Factor Authentication and Custom Favorites"
+# GRAND-CINEPLEX: A Secure Movie Management Platform with Multi-Factor Authentication and Custom Favorites
 
 Grand Cineplex is a feature-rich movie management platform that allows users to create, update, and delete movies with ease. It offers a seamless browsing experience where users can explore various movies and actors, and mark their favorites for quick access. Security is a top priority, with multi-factor authentication implemented to ensure enhanced account protection, providing a safe and user-friendly environment for all movie enthusiasts.
-
-## Features
 
 ## Features
 
