@@ -16,7 +16,7 @@ const AboutPage = () => {
             data-aos-duration="1000"
             data-aos-delay="200"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Grand cineplex a secure and dynamic movie management platform.
           </p>
         </div>
       </div>
@@ -27,19 +27,28 @@ const AboutPage = () => {
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-          exercitationem nemo maiores laboriosam asperiores consequatur at, ipsa
-          recusandae veniam nobis, ratione quisquam. Ducimus provident culpa
-          molestias velit magni autem ea.
+          Grand Cineplex is a feature-rich movie management platform designed to
+          give users complete control over their movie collections. Users can
+          easily create new movies, update details, or delete entries as needed.
+          The platform also allows users to browse a vast selection of movies
+          and actors, with the ability to mark favorites for quick access. Built
+          with a focus on security, Grand Cineplex uses strong multi-factor
+          authentication to protect user data and ensure a safe browsing
+          experience. Whether you're a casual movie lover or a dedicated
+          cinephile, Grand Cineplex offers the perfect balance of flexibility,
+          security, and ease of use.
         </div>
         <div
           className="right flex-1"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, nulla
-          quae ipsa, facere minima ducimus eos sed ipsum nobis consectetur
-          aspernatur dolore a sunt, earum est? Autem placeat quae fuga.
+          Grand Cineplex is a dynamic movie management application that empowers
+          users to create, delete, and update movies effortlessly. Users can
+          explore an extensive range of films and actors, with the option to
+          mark their favorites for easy access. To ensure the security of every
+          account, the platform is equipped with strong multi-factor
+          authentication, providing robust protection for all users.
         </div>
       </div>
 
@@ -110,12 +119,12 @@ const AboutPage = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, illum
-        repellendus? Beatae ab quae inventore eligendi dolorum molestias sed
-        illum dolorem labore expedita facilis enim quisquam assumenda, id
-        similique facere, blanditiis odio voluptate quo corporis quas ut. Quidem
-        fugiat magni tempora ut, nam, laborum praesentium recusandae accusamus
-        voluptates nulla adipisci.
+        This application provides a comprehensive solution for managing movies,
+        allowing users to create, delete, and update entries seamlessly. It
+        features an extensive movie and actor database with the ability to mark
+        favorites. Security is emphasized with multi-factor authentication, and
+        future updates will include personalized recommendations and social
+        sharing options.
       </div>
     </div>
   );

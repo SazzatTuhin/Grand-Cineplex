@@ -2,8 +2,9 @@ import { useMediaQuery } from "@mantine/hooks";
 import { AlignJustify, X } from "lucide-react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { logout } from "../redux/features/auth/authSlice";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -19,38 +20,38 @@ const Navbar = () => {
       data-aos-duration="1000"
     >
       <div className="left">
-        <Link to="/" className="text-xl font-medium">
+        <HashLink to="/" className="text-xl font-medium">
           Grand Cineplex
-        </Link>
+        </HashLink>
       </div>
 
       <div className="mid hidden md:flex gap-5">
-        <Link to="/" className="link-item">
+        <HashLink to="/" className="link-item">
           Home
-        </Link>
-        <Link to="/movies" className="link-item">
+        </HashLink>
+        <HashLink to="/movies" className="link-item">
           Movies
-        </Link>
-        <Link to="/actors" className="link-item">
+        </HashLink>
+        <HashLink to="/actors" className="link-item">
           Actors
-        </Link>
-        <Link to="/about" className="link-item">
+        </HashLink>
+        <HashLink to="/about" className="link-item">
           About
-        </Link>
-        <Link to="/contact" className="link-item">
+        </HashLink>
+        <HashLink to="/contact" className="link-item">
           Contact
-        </Link>
+        </HashLink>
         {auth?.user?.role === "admin" && (
-          <Link to="/admin/manage-movies" className="link-item">
+          <HashLink to="/admin/manage-movies" className="link-item">
             Manage Movies
-          </Link>
+          </HashLink>
         )}
       </div>
 
       <div className="right flex gap-5 items-center">
         {auth?.user ? (
           <div className="flex items-center gap-5">
-            <Link
+            <HashLink
               to="/profile"
               className="w-12 h-12 rounded-full overflow-hidden"
             >
@@ -59,7 +60,7 @@ const Navbar = () => {
                 alt={auth?.user?.name}
                 className="w-full h-full object-cover"
               />
-            </Link>
+            </HashLink>
             <button
               onClick={() => {
                 {
@@ -73,9 +74,9 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <Link to="/login" className="btn">
+          <HashLink to="/login" className="btn">
             Sign in
-          </Link>
+          </HashLink>
         )}
 
         <button
@@ -92,25 +93,25 @@ const Navbar = () => {
           className="fixed top-0 left-0 right-0 bottom-0 w-full h-screen bg-red flex items-center justify-center"
         >
           <div className="flex flex-col gap-5 items-start text-xl">
-            <Link to="/" className="link-item">
+            <HashLink to="/" className="link-item">
               Home
-            </Link>
-            <Link to="/movies" className="link-item">
+            </HashLink>
+            <HashLink to="/movies" className="link-item">
               Movies
-            </Link>
-            <Link to="/actors" className="link-item">
+            </HashLink>
+            <HashLink to="/actors" className="link-item">
               Actors
-            </Link>
-            <Link to="/about" className="link-item">
+            </HashLink>
+            <HashLink to="/about" className="link-item">
               About
-            </Link>
-            <Link to="/contact" className="link-item">
+            </HashLink>
+            <HashLink to="/contact" className="link-item">
               Contact
-            </Link>
+            </HashLink>
             {auth?.user?.role === "admin" && (
-              <Link to="/admin/manage-movies" className="link-item">
+              <HashLink to="/admin/manage-movies" className="link-item">
                 Manage Movies
-              </Link>
+              </HashLink>
             )}
           </div>
         </div>
